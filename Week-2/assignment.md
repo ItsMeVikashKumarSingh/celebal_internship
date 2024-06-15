@@ -38,14 +38,15 @@
      sudo systemctl restart sshd
      ```
 
-4. **Configure Network Settings on the Virtual Machine**:
-   - In the VMware application, go to the settings of the RHEL VM.
-   - Under "Network Adapter," ensure the network adapter is connected to the appropriate network.
-   - Note down the IP address assigned to the VM by running `ip addr` on the RHEL console.
+4. **Find the IP address of your Machine**:
+
+      ```
+      ip addr show
+      ```
 
 5. **Log in through SSH from the Host Machine**:
    - On your host machine, open a terminal (e.g., Command Prompt on Windows, Terminal on macOS/Linux).
-   - Use the `ssh` command to connect to the RHEL VM, replacing 'newuser' with your username and 'vm_ip_address' with the noted IP address:
+   - Use the `ssh` command to connect to the RHEL Machine, replacing 'newuser' with your username and 'vm_ip_address' with the noted IP address:
      ```
      ssh newuser@vm_ip_address
      ```
